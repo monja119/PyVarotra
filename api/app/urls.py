@@ -1,8 +1,14 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path, include
+from django.http import request
+
+from rest_framework.routers import DefaultRouter
+
 from app.views import *
 
+router = DefaultRouter()
+
 urlpatterns = [
-    path('', Home().index, name='home'),
-    path('media/<str:type>/<str:name>', Media().getFile, name='media'),
+    path('home/', HomeViewset.as_view({'post': 'home' }), name='home'),
 ]
+
+urlpatterns += router.urls
