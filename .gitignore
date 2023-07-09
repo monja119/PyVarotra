@@ -1,3 +1,4 @@
 .vscode
 api/app/migrations
 api/app/templates
+client/node_modules
