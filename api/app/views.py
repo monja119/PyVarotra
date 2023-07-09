@@ -1,15 +1,12 @@
 from django.shortcuts import render
-from django.http import request, HttpResponse, FileResponse
-# Create your views here.
+from django.http import HttpResponse
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework.decorators import action
 
 
-class Home:
-    def index(self, request):
-        msg = 'ok, 5/5'
-        return render(request, 'home/index.html', locals())
+class HomeViewset(viewsets.ViewSet):
 
-
-class Media:
-    def getFile(self, request, type, name):
-
-        return FileResponse(filename='../media/'+type+'/'+name, as_attachment=True)
+    def home(self, request):
+        return HttpResponse('ok')
