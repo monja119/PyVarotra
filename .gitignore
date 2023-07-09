@@ -1,1 +1,3 @@
 .vscode
+api/app/migrations
+api/app/templates
