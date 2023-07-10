@@ -9,7 +9,7 @@ router = DefaultRouter()
 
 router.register('produits', ProduitsViewset, basename='produits')
 router.register('media', MediaViewset, basename='media')
-
+router.register('categories', CategoriesViewset, basename='categories')
 
 urlpatterns = [
     path('home/', HomeViewset.as_view({'post': 'home' }), name='home'),

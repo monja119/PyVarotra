@@ -22,3 +22,8 @@ class ProduitsViewset(viewsets.ModelViewSet):
 class MediaViewset(viewsets.ModelViewSet):
     queryset = Media.objects.all()
     serializer_class = MediaSerializer
+
+
+class CategoriesViewset(viewsets.ModelViewSet):
+    queryset = Categories.objects.all()
+    serializer_class = CategoriesSerializer
