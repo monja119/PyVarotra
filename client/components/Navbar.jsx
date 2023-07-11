@@ -10,8 +10,18 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
+      <nav className="navbar max-width">
+        <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+        <ul className="links">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Produits</a></li>
+          <li><a href="#">Paniers</a></li>
+          <li className="btn signin"><a href="#">Sign In</a></li>
+          <li className="btn join"><a href="#">Join</a></li>
+        </ul>
+      </nav>
       <p className="logo">
-        <Link href="/">JSM Headphones</Link>
+        <Link href="/">Py-varotra</Link>
       </p>
 
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
@@ -24,4 +34,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

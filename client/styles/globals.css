@@ -26,12 +26,60 @@ width: 100%;
   padding: 10px;
 }
 
-.navbar-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 18px;
-  position: relative;
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.logo{
+    width: 90px;
+    height: 90px;
+}
+
+.navbar .links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar .links li a {
+    text-decoration: none;
+    color: #050404;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.navbar .links li:hover :where(a, span) {
+    color: #19a463;
+}
+
+.navbar .links .language {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.navbar .links span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.navbar .links .join a {
+    
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.navbar .links .join a:hover {
+    color: #fff;
+    background: #19a463;
+    border-color: transparent;
+}
+
+
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
@@ -64,11 +112,7 @@ width: 100%;
     -webkit-text-stroke: 1px #f02d34;
     margin-left: 6px;
 }
-.logo{
-  color: gray;
-  font-size: 18px;
 
-}
 .cart-icon{
   font-size: 25px;
   color: gray;
