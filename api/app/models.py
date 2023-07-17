@@ -35,6 +35,11 @@ class Media(models.Model):
         return super(Media, self).save(*args, **kwargs)
 
 
+class Categories(models.Model):
+    name = models.CharField(max_length=50)
+    date = models.DateTimeField(auto_now=True)
+
+
 class Produits(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
@@ -42,10 +47,6 @@ class Produits(models.Model):
     date = models.DateTimeField(auto_now=True)
 
     media = models.ForeignKey(Media, on_delete=models.CASCADE)
+    categories = models.ManyToManyField(Categories)
 
 
-class Categories(models.Model):
-    name = models.CharField(max_length=50)
-    date = models.DateTimeField(auto_now=True)
-
-    produits = models.ManyToManyField(Produits)

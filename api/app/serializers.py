@@ -11,17 +11,17 @@ class MediaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class CategoriesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Categories
+        fields = '__all__'
+
+
 class ProduitsSerializer(serializers.ModelSerializer):
+    categories = CategoriesSerializer(required=False, read_only=True, many=True)
     media = MediaSerializer(required=False, read_only=True)
 
     class Meta:
         model = Produits
-        fields = '__all__'
-
-
-class CategoriesSerializer(serializers.ModelSerializer):
-    produits = ProduitsSerializer(required=False, many=True, read_only=True)
-
-    class Meta:
-        model = Categories
         fields = '__all__'
