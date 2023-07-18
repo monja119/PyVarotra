@@ -49,8 +49,10 @@ export default function Cart() {
                     <img src={item.media.link} alt="product-item"/>
                     <div className="Cart-container-items-item-right">
                       <div className="Cart-container-items-item-right-top">
-                        <h2>{item.name}</h2>
-                        <button onClick={() => removeItem(item.id)}>removeItem</button>
+                        <h2>{item.name.toUpperCase()}</h2>
+                        <button onClick={() => removeItem(item.id)}>
+                          <ion-icon className="trash" name="trash-bin-outline"></ion-icon>
+                        </button>
                       </div>
                       <div className="Cart-container-items-item-right-middle">
                         <div className="descritpion">{item.description}</div>
@@ -61,11 +63,12 @@ export default function Cart() {
                           <h2>{formatedPrice} MGA</h2>
                         </div>
                         <div className="Cart-container-items-item-right-bottom-right">
-                        <div>
-                          <button>-</button>
-                          <div>0</div>
-                          <button>+</button>
-                        </div>
+                          
+                          <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
+                          <div className="indicator">
+                            <h2>{item.quantity}</h2>
+                          </div>
+                          <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
                         </div>
                       </div>
                     </div>

@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
       <img src={media.link} alt={name} className="product-image" />
       <div className="info-section">
         <div className="info-section-left">
-          <h3 className="product-title">{name}</h3>
+          <h3 className="product-title">{name.toUpperCase()}</h3>
           <p className="product-price">{formattedPrice} MGA</p>
         </div>
         <div className="info-section-right">
