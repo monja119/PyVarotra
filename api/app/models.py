@@ -45,7 +45,7 @@ class Produits(models.Model):
     description = models.TextField()
     price = models.IntegerField()   # en Ar
     date = models.DateTimeField(auto_now=True)
-
+    quatity = models.IntegerField()
     media = models.ForeignKey(Media, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Categories)
 
