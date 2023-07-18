@@ -1,0 +1,61 @@
+.Cart {
+  padding: 3em 10em;
+  display: flex;
+  flex-direction: column;
+}
+.Cart-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Cart-container {
+  display: flex;
+  flex-direction: column;
+}
+.Cart-container-items {
+  display: flex;
+  flex-direction: column;
+}
+.Cart-container-items-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 500px;
+  max-height: 250px;
+  padding: 0.3em;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px -2px #666;
+}
+.Cart-container-items-item img {
+  width: 25%;
+  height: 240px;
+  border-radius: 7.5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.Cart-container-items-item-right {
+  width: 75%;
+  height: 100%;
+  margin: 0.3em 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Cart-container-items-item-right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Cart-container-items-item-right-top h2 {
+  color: #777;
+  font-size: 1em;
+}
+.Cart-container-items-item-right-middle {
+  margin: 1em 0;
+}
+.Cart-container-items-item-right-middle p {
+  margin: 0em;
+}/*# sourceMappingURL=Cart.css.map */

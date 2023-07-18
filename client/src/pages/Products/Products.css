@@ -1,0 +1,14 @@
+.products-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.products-container-product {
+  width: 80%;
+  padding: 3em;
+}
+.products-container-product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=Products.css.map */

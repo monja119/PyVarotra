@@ -1,0 +1,20 @@
+fonctionnalités:
+-Authentification
+-Payements
+-
+
+Produits:
+-toutes sortes de produits
+   -section : cosmétique, électronics, agricole sns ...
+
+Pages 12:
+-Accueil 
+-Produits : liste de produits, système de recherche (par prix , date de pub, article) + bouton (page dédié à l'article spécifique) + bouton(ajouter au pannier) + page de confirmation (après io zay zay vao ajouter)
+-Pannier (page réservation de produits) + confirmation + page de payement
+-Systèmes de gestion de stock: rupture de stock + date de nouveaux arrivé de stock 
+-Commentaires + Avis
+
+Clients:
+-Tous acheteurs
+
+
