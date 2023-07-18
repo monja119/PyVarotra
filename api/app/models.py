@@ -2,6 +2,20 @@ import os
 from django.db import models
 
 
+class User(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    address = models.TextField()
+    email = models.EmailField()  # unique
+    phone = models.CharField(max_length=50)
+    created_date = models.DateTimeField(auto_now=True)
+
+
+class Password(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    password = models.CharField(max_length=200)
+
+
 def get_upload_path(instance, filename):
     # getting the file instance type
     media_type = instance.media_type
